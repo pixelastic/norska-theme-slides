@@ -1,0 +1,31 @@
+include ../mixins.pug
+
+doctype html
+html(lang='en')
+  +norska_head
+  body.amaranth
+    //- Prevent all display in portrait mode
+    .landscape_hidden.absolute.inset-0.bg-gray.flex.flex-center
+      .text-7.p-5.text-center.white.text-shadow Please, turn your phone in landscape mode
+
+    //- Main fullscreen slides
+    .portrait_invisible.h-100vh.w-100vw.flex.flex-center.bg-gray-3
+      .device-aspect-ratio
+        //- Actual slide
+        .-h-10p.amaranth
+          block content
+        //- Proress indicator
+        .absolute.bottom-0.left-0.right-0.h-10p
+    //- .flcnw.flc.h-100vh.w-100vw.portrait_invisible
+    //-   .js-wrapper.device-aspect-ratio.bg-white.relative.overflow-hidden.shadow-3.verdana
+    //-     .absolute.bottom-0.left-0.right-0.h-8p.bg-gray-8.white
+    //-       .js-time-indicator.z-1.absolute.top-0.left-0.min-w-1.h-03.rounded-br-full.bg-gradient-x.bg-gradient-to-green.transition.transition-width.transition-02.transition-linear
+    //-       .fln.flrnw
+    //-         a.fla.flcnw.flccv.p-1.text-1.amaranth.text-shadow.text-shadow-gray-1(href=pageUrl)=pageTitle
+    //-         .fln.flcnw.px-5.gray-3.text-01.pt-1
+    //-           .fln.lh-1.text-right=pageAuthor
+    //-           a.fln.green.lh-1.text-right(href=`https://twitter.com/${pageTwitter}`)
+    //-             .inline @
+    //-             .inline.hover_underline=pageTwitter
+
+  +norska_scripts

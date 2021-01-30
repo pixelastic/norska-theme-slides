@@ -1,13 +1,18 @@
 {
   "devDependencies": {
-    "aberlaas": "1.14.0"
+    "aberlaas": "1.14.0",
+    "norska": "latest"
   },
   "files": [
+    "main.js",
+    "tailwind.config.js",
     "lib/*.js"
   ],
   "license": "MIT",
-  "main": "lib/main.js",
+  "main": "./main.js",
   "name": "norska-theme-slides",
+  "homepage": "https://projects.pixelastic.com/norska/",
+
   "scripts": {
     "ci": "./scripts/ci",
     "husky:precommit": "./scripts/husky-precommit",

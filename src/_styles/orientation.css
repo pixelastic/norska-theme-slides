@@ -1,0 +1,16 @@
+@media (orientation: portrait) {
+  .portrait_invisible {
+    @apply invisible;
+  }
+  .portrait_hidden {
+    @apply hidden;
+  }
+}
+@media (orientation: landscape) {
+  .landscape_invisible {
+    @apply invisible;
+  }
+  .landscape_hidden {
+    @apply hidden;
+  }
+}

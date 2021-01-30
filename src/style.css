@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '_styles/fonts.css';
+@import '_styles/orientation.css';
+@import '_styles/device-aspect-ratio.css';
+
+.flex-center {
+  @apply items-center justify-center;
+}
+/* @import '_styles/hits.css'; */
+/* @import '_styles/sortBy.css'; */
+/* @import '_styles/tags.css'; */
+/* @import '_styles/toggle.css'; */
