@@ -2,14 +2,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import '_styles/fonts.css';
-@import '_styles/orientation.css';
-@import '_styles/device-aspect-ratio.css';
+@import '_styles/fonts';
+@import '_styles/highlight';
+@import '_styles/device-aspect-ratio';
+@import '_styles/orientation';
+@import '_styles/dynamic-font-size';
+@import '_styles/time-indicator';
+@import '_styles/base';
 
 .flex-center {
   @apply items-center justify-center;
 }
-/* @import '_styles/hits.css'; */
-/* @import '_styles/sortBy.css'; */
-/* @import '_styles/tags.css'; */
-/* @import '_styles/toggle.css'; */
