@@ -1,4 +1,4 @@
-const hljs = require('highlight.js/lib/highlight.js');
+const hljs = require('highlight.js/lib/core.js');
 const hljsCss = require('highlight.js/lib/languages/css');
 const hljsHtml = require('highlight.js/lib/languages/xml');
 const hljsJson = require('highlight.js/lib/languages/json');

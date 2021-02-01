@@ -3,7 +3,7 @@
   @apply bg-gray-9 white;
 }
 .code {
-  @apply bg-gray-9 p-02 red-5;
+  @apply bg-gray-9 p-02 red-5 mono;
 }
 
 .js-codeblock {

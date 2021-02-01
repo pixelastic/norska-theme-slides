@@ -18,7 +18,7 @@
     @apply hidden border-0;
   }
   .js-slide-current {
-    @apply block;
+    @apply flex;
   }
   /* Show notes when pressing H */
   [data-notes-visible='1'] .js-slide-current .notes {
