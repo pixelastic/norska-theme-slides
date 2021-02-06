@@ -21,7 +21,7 @@
     "test": "./scripts/test",
     "test:watch": "./scripts/test-watch"
   },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "highlight.js": "10.5.0"
   }
