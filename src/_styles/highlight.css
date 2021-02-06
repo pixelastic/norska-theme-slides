@@ -1,5 +1,5 @@
 .codeblock {
-  @apply block whitespace-pre;
+  @apply block whitespace-pre mono;
   @apply bg-gray-9 white;
 }
 .code {

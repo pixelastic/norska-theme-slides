@@ -12,21 +12,18 @@ html(lang='en')
     .portrait_invisible.h-100vh.w-100vw.flex.flex-center.bg-gray-3
       .relative.device-aspect-ratio.js-dynamic-font-size.js-swipe-area
         //- Actual slide
-        .-h-10p.amaranth.bg-white.text-3.gray-9
+        .-h-10p.amaranth.bg-white.text-3.gray-9.relative.overflow-hidden
           block content
         //- Progress indicator
-        .absolute.bottom-0.left-0.right-0.h-10p.bg-red
+        .absolute.bottom-0.left-0.right-0.h-10p.bg-gray-8
           .js-time-indicator
-    //- .flcnw.flc.h-100vh.w-100vw.portrait_invisible
-    //-   .js-wrapper.device-aspect-ratio.bg-white.relative.overflow-hidden.shadow-3.verdana
-    //-     .absolute.bottom-0.left-0.right-0.h-8p.bg-gray-8.white
-    //-       .js-time-indicator.z-1.absolute.top-0.left-0.min-w-1.h-03.rounded-br-full.bg-gradient-x.bg-gradient-to-green.transition.transition-width.transition-02.transition-linear
-    //-       .fln.flrnw
-    //-         a.fla.flcnw.flccv.p-1.text-1.amaranth.text-shadow.text-shadow-gray-1(href=pageUrl)=pageTitle
-    //-         .fln.flcnw.px-5.gray-3.text-01.pt-1
-    //-           .fln.lh-1.text-right=pageAuthor
-    //-           a.fln.green.lh-1.text-right(href=`https://twitter.com/${pageTwitter}`)
-    //-             .inline @
-    //-             .inline.hover_underline=pageTwitter
-
+          .flex.flex-row.h-100p
+            .flex-auto.flex.flex-col.justify-center
+              a.white.text-shadow.text-shadow-gray-1.text-2(href=data.meta.productionUrl)=data.meta.title
+            .flex-none.flex.flex-col.px-3.justify-center
+              .flex.flex-col.lh-1
+                .text-right.white.text-01=data.meta.author
+                a.text-right.text-01.green(href=`https://twitter.com/${data.meta.twitter}`)
+                  .inline @
+                  .inline.hover_underline.text-shadow=data.meta.twitter
   +norska_scripts
