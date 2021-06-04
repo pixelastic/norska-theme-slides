@@ -15,7 +15,7 @@ module.exports = {
   init() {
     document.querySelectorAll('.codeblock').forEach((block) => {
       block.classList.add('js-codeblock');
-      hljs.highlightBlock(block);
+      hljs.highlightElement(block);
     });
   },
 };
