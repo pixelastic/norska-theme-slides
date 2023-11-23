@@ -1,0 +1,22 @@
+//- Slot system for pug:
+//-
+//- When using the slide_* mixins, it is possible to register slots by calling
+//- +slot(slotName). The block of this slot will then be saved in memory, and
+//- will be placed at the correct position in the markup by the mixin (unsing
+//- the +unslot(slotName) function.
+//-
+//- The slots are named alpha, beta, gamma & delta. Their value can either be
+//- a string, or any other pug hierarchy.
+//-
+//- The actual code of the mixin takes care to:
+//- - Clear the previously used list of slots
+//- - Call the mixin block (so slots are registered)
+
+- var SLOTS = {}
+- var MIXIN_NAME = "__default__"
+//- Save the specific slot
+mixin slot(slotName)
+  - SLOTS[MIXIN_NAME][slotName] = block
+//- Read the specific slot
+mixin unslot(slotName)
+  - SLOTS[MIXIN_NAME][slotName].call();

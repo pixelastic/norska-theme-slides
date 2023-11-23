@@ -1,6 +1,60 @@
-mixin slide()
-  .slide.h-100p.flex.flex-col(class=attributes.class)
-    block
+include ./slots.pug
+
+//- Slide Helpers
+include ./slide_helpers/two_columns.pug
+
+//- Slide Layouts
+include ./slide_layouts/slide.pug
+include ./slide_layouts/slide_main.pug
+include ./slide_layouts/slide_speaker.pug
+
+
+
+
+
+
+
+
+  //- p ok
+  //- .bg-red ok
+  //- .flex.flex-col.h-100p.bg-no-repeat.bg-cover.bg-center(style="background-image: url(./assets/title.jpg)")
+  //-   .flex-auto.flex.flex-col.flex-center
+  //-     .text-left.white.text-shadow
+  //-       .bold.text-7 Blog Tech
+  //-       .text-4 Vaincre le syndrome de la page blanche
+  //- .bg-red
+  //-   +unslot('alpha')
+  //- if SLOTS['beta']
+  //-   .bg-blue
+  //-     +unslot('beta')
+
+
+// mixin slide_speaker
+// Name, job title, picture, bottom
+// mixin slide_vertical
+// mixin slide_vertical_reverse
+// mixin slide_image_right
+// mixin_slide_image_left
+// mixin slide_three_columns
+// mixin slide_two_columns
+// mixin slide_conclusion
+// mixin slide_title
+// mixin slide_quote
+// mixin slide_inspiration
+// mixin slide_code
+//
+// mixin columns
+// pass many slots, and adapt them accordingly, making sure spacing is correct?
+//
+// mixin square
+// display a square with four parts, each with their own background?
+//
+
+// see r-fit-text from reveal
+// find a way to put images in the background as well
+
+
+
 
 mixin title()
   .text-3.green.bold.text-shadow.pl-1

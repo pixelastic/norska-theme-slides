@@ -1,0 +1,45 @@
+//- Main title slide
+mixin slide_main(options = {})
+  - MIXIN_NAME="slide_main";
+  - options = _.merge({MIXIN_NAME}, options);
+
+  mixin my_slot(slotName)
+    p Called from
+    p=MIXIN_NAME
+
+  - SLOTS[MIXIN_NAME] = {}; block && block()
+
+
+  +slide.flex-center.bg-green
+    p=JSON.stringify(SLOTS)
+    p=JSON.stringify(options)
+    .max-w-90p.lh-1.text-center
+      //- Main title
+      .text-7.white.text-shadow.bold
+        +unslot('title')
+
+      //- Subtitle
+      if SLOTS[MIXIN_NAME]['subtitle']
+        .text-5.white.text-shadow.mt-8
+          +unslot('subtitle')
+
+
+
+//- So, there is a way to keep the context of the calling mixin
+//- by using a named argument.
+//- I'll make it a default key of the main options object, so I can pass one god
+//- object to any mixin that requires arguments, without overwriting it
+//
+// Now the question is, when I call +slot() can I know where i'm situated and
+// save in the right part?
+mixin alpha(options = {}, mixinName = "alpha")
+  - options = _.merge({MIXIN_NAME: "alpha"}, options);
+  p=JSON.stringify(options)
+  p=mixinName
+  +beta
+  p=mixinName
+  p=JSON.stringify(options)
+
+mixin beta(options ={}, mixinName = "beta")
+  - options = _.merge({MIXIN_NAME: "beta"}, options);
+  p.bg-blue I'm in beta

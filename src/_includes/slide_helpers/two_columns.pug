@@ -1,0 +1,9 @@
+mixin two_columns()
+  -
+    CURRENT_MIXIN = "two_columns"
+    SLOTS[CURRENT_MIXIN] = {}; block && block()
+
+  p
+    +unslot('alpha')
+  p
+    +unslot('beta')
